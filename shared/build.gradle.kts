@@ -1,14 +1,11 @@
-import com.mocoding.pokedex.Configuration
-import com.mocoding.pokedex.Deps
-
 plugins {
-    kotlin("multiplatform")
-    kotlin("native.cocoapods")
-    kotlin("plugin.serialization")
-    id("com.android.library")
-    id("org.jetbrains.compose")
-    id("kotlin-parcelize")
-    id("app.cash.sqldelight")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.kotlin.native.cocoapods)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.compose)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.sqlDelight)
 }
 
 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
@@ -38,8 +35,8 @@ kotlin {
         framework {
             baseName = "shared"
             isStatic = true
-            export(Deps.ArkIvanov.Decompose.decompose)
-            export(Deps.ArkIvanov.Essenty.lifecycle)
+            export(libs.decompose)
+            export(libs.essenty.lifecycle)
         }
     }
     
@@ -56,50 +53,41 @@ kotlin {
                 }
 
                 // Ktor
-                with(Deps.Io.Ktor) {
-                    api(ktorClientCore)
-                    api(ktorSerializationKotlinxJson)
-                    api(ktorClientContentNegotiation)
-                    api(ktorClientLogging)
-                }
+                api(libs.ktor.clientCore)
+                api(libs.ktor.serializationKotlinxJson)
+                api(libs.ktor.clientContentNegotiation)
+                api(libs.ktor.clientLogging)
 
                 // Logback for ktor logging
-                implementation(Deps.Logback.logbackClassic)
+                implementation(libs.logbackClassic)
 
                 // SqlDelight
-                with(Deps.CashApp.SQLDelight) {
-                    api(coroutinesExtensions)
-                    api(primitiveAdapters)
-                }
+                api(libs.sqlDelight.coroutinesExtensions)
+                api(libs.sqlDelight.primitiveAdapters)
 
                 // Koin
-                with(Deps.Koin) {
-                    api(core)
-                    api(test)
-                }
+                api(libs.koin.core)
+                api(libs.koin.test)
 
                 // KotlinX Serialization Json
-                implementation(Deps.Org.JetBrains.Kotlinx.kotlinxSerializationJson)
+                implementation(libs.kotlinxSerializationJson)
 
                 // Coroutines
-                implementation(Deps.Org.JetBrains.Kotlinx.coroutinesCore)
+                implementation(libs.coroutinesCore)
 
                 // MVIKotlin
-                with(Deps.ArkIvanov.MVIKotlin) {
-                    api(mvikotlin)
-                    api(mvikotlinMain)
-                    api(mvikotlinExtensionsCoroutines)
-                }
+                api(libs.mvikotlin)
+                api(libs.mvikotlinMain)
+                api(libs.mvikotlinExtensionsCoroutines)
+
 
                 // Decompose
-                with(Deps.ArkIvanov.Decompose) {
-                    api(decompose)
-                    api(extensionsCompose)
-                }
+                api(libs.decompose)
+                api(libs.decompose.extensionsCompose)
 
                 // Image Loading
-                api(Deps.Github.imageLoader)
-                implementation(Deps.ArkIvanov.Essenty.lifecycle)
+                api(libs.imageLoader)
+                implementation(libs.essenty.lifecycle)
             }
         }
         val commonTest by getting {
@@ -110,13 +98,13 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 // Ktor
-                implementation(Deps.Io.Ktor.ktorClientAndroid)
+                implementation(libs.ktor.clientAndroid)
 
                 // SqlDelight
-                implementation(Deps.CashApp.SQLDelight.androidDriver)
+                implementation(libs.sqlDelight.androidDriver)
 
                 // Koin
-                implementation(Deps.Koin.android)
+                implementation(libs.koin.android)
             }
         }
         val androidUnitTest by getting
@@ -126,10 +114,10 @@ kotlin {
 
             dependencies {
                 // Ktor
-                implementation(Deps.Io.Ktor.ktorClientJava)
+                implementation(libs.ktor.clientJava)
 
                 // SqlDelight
-                implementation(Deps.CashApp.SQLDelight.sqliteDriver)
+                implementation(libs.sqlDelight.sqliteDriver)
             }
         }
 
@@ -144,13 +132,13 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
             dependencies {
                 // Ktor
-                implementation(Deps.Io.Ktor.ktorClientDarwin)
+                implementation(libs.ktor.clientDarwin)
 
                 // SqlDelight
-                implementation(Deps.CashApp.SQLDelight.nativeDriver)
+                implementation(libs.sqlDelight.nativeDriver)
 
                 // TouchLab
-                implementation(Deps.Touchlab.statelyCommon)
+                implementation(libs.statelyCommon)
             }
         }
 
@@ -174,9 +162,9 @@ kotlin {
 
 android {
     namespace = "com.mocoding.pokedex"
-    compileSdk = Configuration.compileSdk
+    compileSdk = 34
     defaultConfig {
-        minSdk = Configuration.minSdk
+        minSdk = 24
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

@@ -1,0 +1,59 @@
+[versions]
+
+kotlin = "1.9.20"
+sqlDelight = "2.0.0"
+agp = "8.9.2"
+compose = "1.5.10"
+activityCompose = "1.8.0"
+composeCompiler = "1.5.4"
+coroutines = "1.7.3"
+serialization = "1.6.0"
+mviKotlin = "3.3.0"
+decompose = "2.1.4-compose-experimental"
+essenty = "1.2.0"
+ktor = "2.3.6"
+koin = "3.5.2-RC1"
+imageLoader = "1.7.1"
+logbackClassic = "1.2.11" # Do not update it unless you read documentation of change, the
+touchlab = "2.0.5"
+
+[libraries]
+activityCompose = { group =  "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+coroutinesCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+decompose = { group = "com.arkivanov.decompose", name = "decompose", version.ref = "decompose" }
+decompose-extensionsCompose = { group = "com.arkivanov.decompose", name = "extensions-compose-jetbrains", version.ref = "decompose" }
+essenty-lifecycle = { group = "com.arkivanov.essenty", name = "lifecycle", version.ref = "essenty" }
+imageLoader = { group =  "io.github.qdsfdhvh", name = "image-loader", version.ref = "imageLoader" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+kotlinxSerializationJson = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+ktor-clientCore = { group =  "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-serializationKotlinxJson = { group =  "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-clientContentNegotiation = { group =  "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-clientLogging = { group =  "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+# Engines
+ktor-clientAndroid = { group =  "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
+ktor-clientDarwin = { group =  "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
+ktor-clientJava = { group =  "io.ktor", name = "ktor-client-java", version.ref = "ktor" }
+logbackClassic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logbackClassic" }
+mvikotlin = { group = "com.arkivanov.mvikotlin", name = "mvikotlin", version.ref = "mviKotlin" }
+mvikotlinMain = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-main", version.ref = "mviKotlin" }
+mvikotlinExtensionsCoroutines = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-extensions-coroutines", version.ref = "mviKotlin" }
+sqlDelight-androidDriver = { group = "app.cash.sqldelight", name = "android-driver", version.ref = "sqlDelight" }
+sqlDelight-sqliteDriver = { group = "app.cash.sqldelight", name = "sqlite-driver", version.ref = "sqlDelight" }
+sqlDelight-nativeDriver = { group = "app.cash.sqldelight", name = "native-driver", version.ref = "sqlDelight" }
+sqlDelight-coroutinesExtensions = { group = "app.cash.sqldelight", name = "coroutines-extensions", version.ref = "sqlDelight" }
+sqlDelight-primitiveAdapters = { group = "app.cash.sqldelight", name = "primitive-adapters", version.ref = "sqlDelight" }
+statelyCommon = { group = "co.touchlab", name = "stately-common", version.ref = "touchlab" }
+
+[plugins]
+sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-native-cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

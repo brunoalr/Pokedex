@@ -33,7 +33,7 @@ fun MainViewController(
             storeFactory = DefaultStoreFactory(),
         )
 
-    return ComposeUIViewController {
+    return ComposeUIViewController({ enforceStrictPlistSanityCheck = false }) {
         val density = LocalDensity.current
 
         val topSafeAreaDp = with(density) { topSafeArea.toDp() }

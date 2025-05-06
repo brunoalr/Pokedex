@@ -4,22 +4,16 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.sqlDelight)
 }
 
 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
 kotlin {
-    jvm("desktop") {
-        jvmToolchain(11)
-    }
+    jvm("desktop")
 
-    androidTarget{
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "11"
-            }
-        }
+    androidTarget {
     }
 
     iosX64()
@@ -30,7 +24,7 @@ kotlin {
         summary = "Pokedex the Shared Module"
         homepage = "Link to the Shared Module homepage"
         version = "1.0.0"
-        ios.deploymentTarget = "14.1"
+        ios.deploymentTarget = "18.3"
         podfile = project.file("../ios/Podfile")
         framework {
             baseName = "shared"
@@ -39,7 +33,7 @@ kotlin {
             export(libs.essenty.lifecycle)
         }
     }
-    
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -162,7 +156,7 @@ kotlin {
 
 android {
     namespace = "com.mocoding.pokedex"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         minSdk = 24
     }

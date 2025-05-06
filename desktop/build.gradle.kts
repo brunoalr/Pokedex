@@ -3,6 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose)
+    alias(libs.plugins.compose.compiler)
 }
 
 group = "com.mocoding"
@@ -10,8 +11,6 @@ version = "1.0.0-SNAPSHOT"
 
 kotlin {
     jvm {
-        jvmToolchain(11)
-        withJava()
     }
     sourceSets {
         val jvmMain by getting {

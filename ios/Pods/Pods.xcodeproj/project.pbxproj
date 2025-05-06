@@ -280,25 +280,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00311D40EAF3FB02C2268D50C3BF1055 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C34512EB583C9C2C01D2D7C232F0575 /* shared.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		1217311526E91FF77EBEAED79BA16486 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB152510A68F676D6A953FA40B4BA413 /* Pods-Pokedex.debug.xcconfig */;
@@ -337,6 +318,25 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		33B46C61D06B763501B52057B3E055C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C34512EB583C9C2C01D2D7C232F0575 /* shared.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		593F10BFFA94DAC7D6E17FB8A7F32D72 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -506,7 +506,7 @@
 			};
 			name = Debug;
 		};
-		C58517B7F6D8C27274A7138470374668 /* Debug */ = {
+		C658AF3124510A5A95600427B4596634 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0BC5AE4B6A0AE2E22B43D4C114584313 /* shared.debug.xcconfig */;
 			buildSettings = {
@@ -514,7 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,8 +539,8 @@
 		8349D8E2EC974421A14EF8ABFF6AD6DC /* Build configuration list for PBXAggregateTarget "shared" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C58517B7F6D8C27274A7138470374668 /* Debug */,
-				00311D40EAF3FB02C2268D50C3BF1055 /* Release */,
+				C658AF3124510A5A95600427B4596634 /* Debug */,
+				33B46C61D06B763501B52057B3E055C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

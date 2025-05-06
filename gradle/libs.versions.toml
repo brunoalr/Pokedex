@@ -15,6 +15,7 @@ koin = "4.0.4"
 imageLoader = "1.7.1"
 logbackClassic = "1.2.11" # Do not update it unless you read documentation of change, the
 touchlab = "2.0.5"
+compose-hot-reload = "1.0.0-alpha09"
 
 [libraries]
 activityCompose = { group =  "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -57,3 +58,4 @@ kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref 
 kotlin-native-cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hot-reload" }

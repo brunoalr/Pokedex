@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.sqlDelight)
+    alias(libs.plugins.composeHotReload)
 }
 
 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)

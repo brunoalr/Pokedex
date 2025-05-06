@@ -110,6 +110,8 @@ kotlin {
 
                 // SqlDelight
                 implementation(libs.sqlDelight.sqliteDriver)
+
+                implementation(libs.kotlinx.coroutines.swing)
             }
         }
 

@@ -27,6 +27,7 @@ koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"
 koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 kotlinxSerializationJson = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "coroutines" }
 ktor-clientCore = { group =  "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
 ktor-serializationKotlinxJson = { group =  "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-clientContentNegotiation = { group =  "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }

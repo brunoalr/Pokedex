@@ -53,9 +53,6 @@ kotlin {
                 api(libs.ktor.clientContentNegotiation)
                 api(libs.ktor.clientLogging)
 
-                // Logback for ktor logging
-                implementation(libs.logbackClassic)
-
                 // SqlDelight
                 api(libs.sqlDelight.coroutinesExtensions)
                 api(libs.sqlDelight.primitiveAdapters)
@@ -148,10 +145,6 @@ kotlin {
             iosSimulatorArm64Test.dependsOn(this)
         }
 
-    }
-
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
     }
 }
 

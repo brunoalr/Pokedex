@@ -13,7 +13,6 @@ essenty = "1.2.0"
 ktor = "2.3.6"
 koin = "4.0.4"
 imageLoader = "1.7.1"
-logbackClassic = "1.2.11" # Do not update it unless you read documentation of change, the
 touchlab = "2.0.5"
 compose-hot-reload = "1.0.0-alpha09"
 
@@ -36,7 +35,6 @@ ktor-clientLogging = { group =  "io.ktor", name = "ktor-client-logging", version
 ktor-clientAndroid = { group =  "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
 ktor-clientDarwin = { group =  "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
 ktor-clientJava = { group =  "io.ktor", name = "ktor-client-java", version.ref = "ktor" }
-logbackClassic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logbackClassic" }
 mvikotlin = { group = "com.arkivanov.mvikotlin", name = "mvikotlin", version.ref = "mviKotlin" }
 mvikotlinMain = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-main", version.ref = "mviKotlin" }
 mvikotlinExtensionsCoroutines = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-extensions-coroutines", version.ref = "mviKotlin" }

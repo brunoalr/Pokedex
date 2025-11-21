@@ -1,20 +1,20 @@
 [versions]
 
-kotlin = "2.1.21"
-sqlDelight = "2.0.0"
-agp = "8.10.1"
-compose = "1.8.1"
-activityCompose = "1.10.1"
+kotlin = "2.2.21"
+sqlDelight = "2.2.1"
+agp = "8.12.0"
+compose = "1.9.3"
+activityCompose = "1.12.0"
 coroutines = "1.10.2"
-serialization = "1.8.1"
-mviKotlin = "3.3.0"
-decompose = "2.1.4-compose-experimental"
-essenty = "1.2.0"
-ktor = "2.3.6"
-koin = "4.0.4"
-imageLoader = "1.7.1"
-touchlab = "2.0.5"
-compose-hot-reload = "1.0.0-alpha09"
+serialization = "1.9.0"
+mviKotlin = "3.3.0" # 4.3.0 has breaking changes
+decompose = "2.1.4-compose-experimental" # later versions have breaking changes
+essenty = "1.2.0" # 2.5.0 has breaking changes
+ktor = "2.3.6" # 3.3.2 has breaking changes
+koin = "4.1.1"
+imageLoader = "1.7.1" # 1.10.0 has breaking changes
+touchlab = "2.0.5" # 2.1.0 has breaking changes
+compose-hot-reload = "1.0.0-rc04"
 
 [libraries]
 activityCompose = { group =  "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
